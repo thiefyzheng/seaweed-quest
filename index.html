@@ -2,19 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Seaweed Quest: Learn About Malaysian Seaweed!</title>
+    <title>Seaweed Farmer: Malaysian Edition</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>🌿 Seaweed Quest 🌊</h1>
-        <div id="game">
-            <div id="score">Score: 0</div>
-            <div id="question"></div>
-            <div id="options" class="options"></div>
-            <button id="next" onclick="nextQuestion()">Next Question →</button>
+    <div class="game-container">
+        <div class="header">
+            <h1>🌱 SEAWEED FARMER 🎮</h1>
+            <div class="stats">
+                <div>Year: <span id="year">1</span></div>
+                <div>Score: <span id="score">0</span></div>
+                <div>CO₂ Absorbed: <span id="co2">0</span>kg</div>
+            </div>
         </div>
+        
+        <div class="game-area">
+            <div id="seaweed-bed"></div>
+            <div id="event-display"></div>
+            <div class="progress-bars">
+                <div class="progress" id="eco-progress">
+                    <div class="progress-fill"></div>
+                    <span>Economy</span>
+                </div>
+                <div class="progress" id="enviro-progress">
+                    <div class="progress-fill"></div>
+                    <span>Environment</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-popup" class="popup hidden">
+            <div id="question"></div>
+            <div id="options"></div>
+        </div>
+
+        <div class="achievements" id="achievements"></div>
     </div>
     <script src="script.js"></script>
 </body>
